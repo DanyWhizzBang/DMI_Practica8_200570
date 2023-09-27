@@ -5,24 +5,25 @@ import 'dart:convert';
 import 'package:practica8_200570/common/Constants.dart';
 import 'package:practica8_200570/model/Media.dart';
 
+
 class HttpHandler{
 
   final String _baseUrl = "api.themoviedb.org";
-  final String _language  = "es-MX";
+  final String _language = "es-MX";
 
-  Future<dynamic>getJson(Uri Uri) async{
-    http.Response response = await http.get(Uri);
-    return json.decode(response.body).toString();
+  Future<dynamic> getJson(Uri uri) async{
+    http.Response response = await http.get(uri);
+    return json.decode(response.body);
   }
-  Future<String> fetchMovies(){
-    var uri = new Uri.https(_baseUrl, "3/movie/popular",{
+
+  Future<List<Media>> fetchMovies(){
+    var uri = new Uri.https(_baseUrl, "3/movie/popular", {
       'api_key' : API_KEY,
-      'page': '1',
-      'language': _language
+      'page' : "1",
+      'language' : _language
     });
     return getJson(uri).then(((data) => 
       data['results'].map<Media>((item) => new Media(item)).toList()
-    ));
-  
+      ));
   }
 }

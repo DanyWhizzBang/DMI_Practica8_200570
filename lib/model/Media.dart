@@ -1,4 +1,4 @@
-import 'dart:html';
+import 'package:practica8_200570/common/Util.dart';
 
 class Media{
   int id;
@@ -10,6 +10,8 @@ class Media{
   String releaseDate;
   List<dynamic> genreIds;
 
+
+String getPosterUrl() => getMediumPictureUrl(posterPath);
   factory Media(Map jsonMap){
     try{
       return new Media.deserialize(jsonMap);
@@ -26,5 +28,5 @@ class Media{
   backdropPath = json["backdrop_path"]?? "",
   overview = json["overview"],
   releaseDate = json["release_date"],
-  genreIds =json["genre_ids"].toList();
+  genreIds = json["genre_ids"].toList();
 }
