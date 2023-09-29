@@ -26,7 +26,7 @@
 
 |  Característica |  Información |
 | :------------: | :------------: |
-| Nombre  |  Cambios en la aplicación Color, tipo de fuente y cambio de icono |
+| Nombre  |  Cambios en la aplicación, pintado de los posters de las películas.  |
 | Descripción  | Es una apliacción centrada en cine. Ofrece a los usuarios una experiencia inmersiva para explorar películas. La barra de navegación en la parte inferior permite acceder rápidamente a las secciones populares y próximas, brindando información relevante y atractiva. Además, cuenta con un práctico cajón lateral que facilita la navegación y proporciona opciones esenciales. Con un diseño oscuro elegante y una interfaz fácil de usar, tu aplicación se enfoca en proporcionar a los amantes del entretenimiento una forma intuitiva de descubrir y seguir sus contenidos favoritos.  |
 |  Fecha de Carga | 21/09/23  |
 
